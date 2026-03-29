@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuantForge - Financial Intelligence API</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    .glass {
+      background: rgba(255,255,255,0.03);
+      backdrop-filter: blur(10px);
+    }
+  </style>
+</head>
+
+<body class="bg-gray-950 text-gray-100 font-sans">
+
+  <!-- NAV -->
+  <header class="flex justify-between items-center px-8 py-4 border-b border-gray-800">
+    <h1 class="text-xl font-bold text-green-400">QuantForge</h1>
+    <div class="space-x-6 text-sm">
+      <a href="#" class="hover:text-green-400 transition">Docs</a>
+      <a href="#" class="hover:text-green-400 transition">Pricing</a>
+      <a href="#" class="bg-green-500 text-black px-4 py-2 rounded-lg font-semibold hover:bg-green-400 transition">
+        🚀 Try on RapidAPI
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="text-center py-24 px-6 max-w-6xl mx-auto relative">
+
+    <div class="absolute inset-0 bg-gradient-to-r from-green-500/10 via-blue-500/10 to-purple-500/10 blur-3xl"></div>
+
+    <h2 class="relative text-5xl font-bold leading-tight">
+      Build Trading & Risk Intelligence  
+      <br>
+      <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">
+        Without Quant Teams
+      </span>
+    </h2>
+
+    <p class="mt-4 text-green-400 text-sm">
+      Designed for AI agents and developer-first trading systems
+    </p>
+
+    <p class="mt-4 text-gray-400 text-lg relative">
+      Pricing, Greeks, strategies, and risk analytics — all in simple APIs.
+    </p>
+
+    <div class="mt-10 flex justify-center gap-4 relative">
+      <button class="bg-green-500 text-black px-6 py-3 rounded-lg font-semibold hover:bg-green-400 transition transform hover:scale-105">
+        🚀 Try API
+      </button>
+      <button class="border border-gray-700 px-6 py-3 rounded-lg hover:border-green-400 transition">
+        📘 View Docs
+      </button>
+    </div>
+
+    <!-- INTERACTIVE CODE -->
+    <div class="mt-14 glass border border-gray-800 rounded-xl p-6 text-left text-sm max-w-3xl mx-auto">
+
+      <div class="flex gap-4 mb-4 text-xs">
+        <button onclick="switchTab('price')" class="tab-btn text-green-400">Option Price</button>
+        <button onclick="switchTab('strategy')" class="tab-btn text-gray-400">Strategy</button>
+        <button onclick="switchTab('risk')" class="tab-btn text-gray-400">Risk</button>
+      </div>
+
+<pre id="codeBlock"><code>
+POST /option-price
+
+{
+  "spot": 100,
+  "strike": 100
+}
+
+→
+
+{
+  "price": 10.45,
+  "delta": 0.52
+}
+</code></pre>
+
+    </div>
+  </section>
+
+  <!-- PROBLEM -->
+  <section class="py-20 text-center border-t border-gray-800">
+    <h3 class="text-3xl font-semibold">Quant finance is powerful — but painful</h3>
+
+    <div class="mt-10 grid md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+      <div class="p-4 hover:bg-gray-900 rounded-lg transition">Complex math</div>
+      <div class="p-4 hover:bg-gray-900 rounded-lg transition">Needs quant expertise</div>
+      <div class="p-4 hover:bg-gray-900 rounded-lg transition">Excel doesn’t scale</div>
+      <div class="p-4 hover:bg-gray-900 rounded-lg transition">No decision APIs</div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="py-20 px-6 max-w-6xl mx-auto">
+    <h3 class="text-3xl font-semibold text-center mb-12">
+      Everything you need
+    </h3>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+      <div class="glass p-6 rounded-xl border border-gray-800 hover:border-green-400 transition hover:-translate-y-1">
+        <h4 class="text-green-400 font-semibold">Options Engine</h4>
+        <p class="mt-2 text-gray-400 text-sm">Pricing + Greeks</p>
+      </div>
+
+      <div class="glass p-6 rounded-xl border border-gray-800 hover:border-blue-400 transition hover:-translate-y-1">
+        <h4 class="text-blue-400 font-semibold">Strategy</h4>
+        <p class="mt-2 text-gray-400 text-sm">Payoff + breakeven</p>
+      </div>
+
+      <div class="glass p-6 rounded-xl border border-gray-800 hover:border-red-400 transition hover:-translate-y-1">
+        <h4 class="text-red-400 font-semibold">Risk</h4>
+        <p class="mt-2 text-gray-400 text-sm">VaR, ES</p>
+      </div>
+
+      <div class="glass p-6 rounded-xl border border-gray-800 hover:border-yellow-400 transition hover:-translate-y-1">
+        <h4 class="text-yellow-400 font-semibold">Multi-Asset</h4>
+        <p class="mt-2 text-gray-400 text-sm">Options, Bonds, FX</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- AI AGENTS SECTION -->
+  <section class="py-24 px-6 bg-gradient-to-b from-gray-950 to-gray-900 border-t border-gray-800">
+
+    <div class="max-w-6xl mx-auto text-center">
+
+      <h3 class="text-4xl font-bold">
+        Built for AI Agents
+      </h3>
+
+      <p class="mt-4 text-gray-400 text-lg max-w-2xl mx-auto">
+        QuantForge acts as the computation engine behind AI trading agents — enabling real-time pricing, decision-making, and risk monitoring.
+      </p>
+
+      <div class="mt-16 grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+        <div class="glass p-6 rounded-xl border border-gray-800 hover:border-green-400 transition hover:-translate-y-1">
+          <h4 class="text-green-400 font-semibold text-lg">📊 Pricing</h4>
+          <p class="mt-3 text-gray-400 text-sm">
+            Price options instantly using advanced models and volatility surfaces.
+          </p>
+        </div>
+
+        <div class="glass p-6 rounded-xl border border-gray-800 hover:border-blue-400 transition hover:-translate-y-1">
+          <h4 class="text-blue-400 font-semibold text-lg">🧠 Decisions</h4>
+          <p class="mt-3 text-gray-400 text-sm">
+            Generate trade insights, evaluate strategies, and simulate outcomes.
+          </p>
+        </div>
+
+        <div class="glass p-6 rounded-xl border border-gray-800 hover:border-yellow-400 transition hover:-translate-y-1">
+          <h4 class="text-yellow-400 font-semibold text-lg">📡 Monitoring</h4>
+          <p class="mt-3 text-gray-400 text-sm">
+            Track market conditions, volatility shifts, and portfolio changes.
+          </p>
+        </div>
+
+        <div class="glass p-6 rounded-xl border border-gray-800 hover:border-red-400 transition hover:-translate-y-1">
+          <h4 class="text-red-400 font-semibold text-lg">⚠️ Risk</h4>
+          <p class="mt-3 text-gray-400 text-sm">
+            Compute VaR, Greeks, and exposures dynamically for risk control.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="mt-16 glass border border-gray-800 rounded-xl p-6 text-left text-sm max-w-3xl mx-auto">
+<pre><code>
+AI Agent → QuantForge API
+
+→ Price option
+→ Evaluate strategy
+→ Assess risk
+→ Execute decision
+
+All in milliseconds
+</code></pre>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24 text-center border-t border-gray-800">
+    <h3 class="text-3xl font-semibold">
+      Start building financial intelligence
+    </h3>
+
+    <p class="text-gray-400 mt-4">
+      Available instantly on RapidAPI
+    </p>
+
+    <div class="mt-8">
+      <button class="bg-green-500 text-black px-8 py-4 rounded-lg font-semibold hover:bg-green-400 transition transform hover:scale-105">
+        🚀 Launch on RapidAPI
+      </button>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-6 text-center text-gray-500 text-sm border-t border-gray-800">
+    Built for developers • QuantForge
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    function switchTab(type) {
+      const block = document.getElementById("codeBlock");
+
+      if (type === "price") {
+        block.innerText = `POST /option-price
+
+{
+  "spot": 100,
+  "strike": 100
+}
+
+→
+
+{
+  "price": 10.45,
+  "delta": 0.52
+}`;
+      }
+
+      if (type === "strategy") {
+        block.innerText = `POST /strategy
+
+{
+  "type": "bull_call_spread"
+}
+
+→
+
+{
+  "max_profit": 120,
+  "breakeven": 105
+}`;
+      }
+
+      if (type === "risk") {
+        block.innerText = `POST /risk
+
+{
+  "portfolio": [...]
+}
+
+→
+
+{
+  "VaR": 5000,
+  "ES": 7200
+}`;
+      }
+
+      document.querySelectorAll(".tab-btn").forEach(btn => btn.classList.remove("text-green-400"));
+      event.target.classList.add("text-green-400");
+    }
+  </script>
+
+</body>
+</html>
